@@ -19,12 +19,10 @@ def main():
 	ax.zaxis.set_major_locator(LinearLocator(10))
 	ax.zaxis.set_major_formatter(FormatStrFormatter('%d'))
 	
+	for i in range(360):
 		ax.view_init(elev=25, azim = i)
 		plt.savefig('this' + str(i) + '.png')
 		print(i)
-	
-	
-	
 
 def arrayXor(X, Y):
 	_array = []
