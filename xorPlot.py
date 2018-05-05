@@ -19,10 +19,13 @@ def main():
 	ax.zaxis.set_major_locator(LinearLocator(10))
 	ax.zaxis.set_major_formatter(FormatStrFormatter('%d'))
 	
-	for i in range(360):
+	for i in range(360): #to view the plot in a window 1. comment out this loop
 		ax.view_init(elev=25, azim = i)
 		plt.savefig('this' + str(i) + '.png')
 		print(i)
+		
+	#2. uncomment the following line
+	#plt.show()
 
 def arrayXor(X, Y):
 	_array = []
